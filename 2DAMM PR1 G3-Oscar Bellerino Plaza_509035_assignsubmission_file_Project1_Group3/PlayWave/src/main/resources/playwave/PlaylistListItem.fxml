@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="playlistListItem" alignment="CENTER_LEFT" onMouseClicked="#playlistSelected" style="-fx-background-color: #292929;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playwave.PlaylistListItemController">
+   <children>
+      <ImageView fx:id="playlistImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+         <HBox.margin>
+            <Insets right="10.0" />
+         </HBox.margin></ImageView>
+      <VBox alignment="CENTER_LEFT" spacing="5.0">
+         <children>
+            <Label fx:id="playlistName" textFill="#e2e2e2">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="numberOfTracks" layoutX="10.0" layoutY="36.0" textFill="#707070">
+               <font>
+                  <Font name="Gill Sans MT" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,22 @@
+.bigButton {
+    -fx-pref-width: 60;
+    -fx-pref-height: 60;
+    -fx-background-color: inherit;
+}
+
+.mediumButton {
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+    -fx-background-color: inherit;
+}
+
+.smallButton {
+    -fx-pref-width: 24;
+    -fx-pref-height: 24;
+    -fx-background-color: inherit;
+    -fx-padding: 5;
+}
+
+.rating {
+    -fx-padding: 0 0 0 5;
+}

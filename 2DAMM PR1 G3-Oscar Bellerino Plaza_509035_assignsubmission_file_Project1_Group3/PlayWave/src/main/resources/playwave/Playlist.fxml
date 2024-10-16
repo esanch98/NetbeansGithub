@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="playlistPanel" stylesheets="@stylesheets/container.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playwave.PlaylistController">
+    <children>
+        <AnchorPane VBox.vgrow="NEVER">
+            <children>
+                <Button fx:id="exitButton" mnemonicParsing="false" onMouseClicked="#exitPlaylist" styleClass="mediumButton" stylesheets="@stylesheets/iconButton.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons/exit.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <HBox fx:id="playlistInfo" alignment="TOP_CENTER" maxHeight="0.0" styleClass="roundedContainer" stylesheets="@stylesheets/container.css" VBox.vgrow="ALWAYS">
+            <children>
+                <StackPane alignment="TOP_CENTER" HBox.hgrow="NEVER">
+                    <children>
+                        <ImageView fx:id="playlistImage" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="editPlaylistImageButton" alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMouseClicked="#editPlaylistIcon" style="-fx-background-color: #00000060; -fx-background-radius: 0 10 0 10;" StackPane.alignment="TOP_RIGHT">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@icons/edit.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <effect>
+                                <Blend />
+                            </effect>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets right="20.0" />
+                    </padding>
+                </StackPane>
+                <VBox HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label fx:id="playlistTitle" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" textFill="#e2e2e2">
+                                    <font>
+                                        <Font size="42.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets right="20.0" />
+                                    </padding>
+                                </Label>
+                                <TextField fx:id="playlistNameTextField" styleClass="defaultTextField" stylesheets="@stylesheets/textField.css" visible="false" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="30.0" />
+                           </font></TextField>
+                                    <Button fx:id="editPlaylistNameButton" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#changePlaylistTitle" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css" HBox.hgrow="ALWAYS">
+                                        <graphic>
+                                            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@icons/edit.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                                    </Button>
+                                    <Button fx:id="confirmNameButton" alignment="TOP_LEFT" onMouseClicked="#confirmName" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css" text="Confirm" HBox.hgrow="ALWAYS">
+                                        <graphic>
+                                            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@icons/check.png" />
+                                                </image>
+                                            </ImageView>
+                                        </graphic>
+                                    </Button>
+                            </children>
+                        </HBox>
+                        <Label fx:id="numberOfTracks" alignment="CENTER" textFill="#707070" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font size="32.0" />
+                            </font>
+                        </Label>
+                        <TextArea fx:id="playlistObservations" onKeyPressed="#editPlaylistObservations" promptText="Observations" style="-fx-text-fill: #707070; -fx-prompt-text-fill: #707070; -fx-control-inner-background: #3e3e3e; -fx-background-color: #3e3e3e; -fx-background-radius: 10;" wrapText="true" VBox.vgrow="ALWAYS">
+                            <font>
+                                <Font name="Gill Sans MT" size="16.0" />
+                            </font>
+                        </TextArea>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <ScrollPane styleClass="scrollableContainer" stylesheets="@stylesheets/container.css" VBox.vgrow="ALWAYS">
+            <content>
+                <VBox fx:id="trackList" />
+            </content>
+        </ScrollPane>
+    </children>
+    <styleClass>
+        <String fx:value="roundedContainer" />
+        <String fx:value="centerContainer" />
+    </styleClass>
+</VBox>

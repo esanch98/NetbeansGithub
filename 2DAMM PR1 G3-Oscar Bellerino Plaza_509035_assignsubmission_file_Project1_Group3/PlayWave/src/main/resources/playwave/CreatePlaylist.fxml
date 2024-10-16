@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" style="-fx-background-color: #292929; -fx-background-radius: 10 10 0 0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playwave.CreatePlaylistController">
+    <children>
+        <HBox alignment="CENTER" minHeight="40.0" spacing="5.0" styleClass="buttonContainer" stylesheets="@stylesheets/container.css" HBox.hgrow="ALWAYS">
+            <children>
+                <TextField fx:id="playlistName" promptText="My awesome playlist" style="-fx-background-color: inherit;" styleClass="defaultTextField" stylesheets="@stylesheets/textField.css" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="Gill Sans MT" size="16.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onMouseClicked="#cancelPlaylistCreation" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" onMouseClicked="#cancelPlaylistCreation" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons/cancel.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="confirmButton" layoutX="18.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#confirmPlaylistCreation" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" onMouseClicked="#confirmPlaylistCreation" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons/check.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</HBox>

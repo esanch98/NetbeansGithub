@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<HBox alignment="CENTER_LEFT" style="-fx-background-color: #292929;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playwave.TrackFoundController">
+   <children>
+      <Button fx:id="addTrackButton" mnemonicParsing="false" onMouseClicked="#addTrackToPlaylist" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <VBox fx:id="track" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #292929;">
+         <children>
+            <Label fx:id="trackTitle" textFill="#e2e2e2">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="trackPath" textFill="#707070">
+               <font>
+                  <Font name="Gill Sans MT" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="3.0" top="3.0" />
+         </padding>
+      </VBox>
+      <ComboBox fx:id="selectPlaylistDropDown" onAction="#playlistSelected" promptText="Select playlist" HBox.hgrow="ALWAYS" />
+   </children>
+</HBox>

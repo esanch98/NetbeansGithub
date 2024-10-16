@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" style="-fx-background-color: #292929; -fx-background-radius: 10 10 0 0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playwave.PlaylistManagementController">
+    <children>
+        <Label text="Playlists" textFill="#e2e2e2" HBox.hgrow="ALWAYS">
+            <font>
+                <Font name="Gill Sans MT Bold" size="32.0" />
+            </font>
+        </Label>
+        <Separator opacity="0.0" HBox.hgrow="ALWAYS" />
+        <HBox fx:id="buttonContainer" alignment="CENTER" maxWidth="90.0" minHeight="40.0" minWidth="50.0" prefHeight="40.0" spacing="5.0" styleClass="buttonContainer" stylesheets="@stylesheets/container.css" HBox.hgrow="NEVER">
+            <children>
+                <Button fx:id="deletePlaylistButton" mnemonicParsing="false" onMouseClicked="#deletePlaylist" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css" HBox.hgrow="NEVER">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" onMouseClicked="#deletePlaylist" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons/trash.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <visible>false</visible>
+                    <managed>false</managed>
+                </Button>
+                <Button fx:id="addPlaylistButton" mnemonicParsing="false" onMouseClicked="#createPlaylist" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icons/plus.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</HBox>

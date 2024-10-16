@@ -1,0 +1,4 @@
+.defaultTextField {
+    -fx-text-fill: #e2e2e2;
+    -fx-prompt-text-fill: #707070;
+}

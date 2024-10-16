@@ -1,0 +1,44 @@
+.parentContainer{
+    -fx-background-color: #0e0e0e;
+}
+
+.container {
+    -fx-background-color: #292929;
+    -fx-padding: 10 40 10 40;
+}
+
+.roundedContainer {
+    -fx-background-color: #292929;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+}
+
+.buttonContainer {
+    -fx-background-color: #3e3e3e;
+    -fx-background-radius: 40;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: inherit;
+    -fx-padding: 0 20 0 0;
+}
+
+.scrollableContainer {
+    -fx-background-color: #292929;
+    -fx-background: #292929;
+    -fx-background-radius: 10;
+}
+
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: inherit;
+    -fx-background-radius: 10;
+}
+
+.increment-button:hover, .decrement-button:hover {
+    -fx-background-color: inherit;
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+    -fx-background-color: #3e3e3e;
+    -fx-background-radius: 10;
+}

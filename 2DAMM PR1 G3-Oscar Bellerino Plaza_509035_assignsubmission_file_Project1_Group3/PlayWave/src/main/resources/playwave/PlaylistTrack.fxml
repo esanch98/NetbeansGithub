@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="playlistTrack" onMouseClicked="#selectedTrack_onMouseClicked" spacing="10.0" stylesheets="@stylesheets/container.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="playwave.PlaylistTrackController">
+   <children>
+      <VBox fillWidth="false" spacing="10.0" stylesheets="@stylesheets/container.css" HBox.hgrow="ALWAYS">
+         <children>
+            <Label fx:id="trackTitle" styleClass="defaultTextField" stylesheets="@stylesheets/textField.css" textFill="#707070">
+               <font>
+                  <Font name="SansSerif Regular" size="28.0" />
+               </font></Label>
+            <HBox fx:id="trackInfo" alignment="CENTER_LEFT" spacing="10.0" stylesheets="@stylesheets/container.css" VBox.vgrow="NEVER">
+               <children>
+                  <ImageView fx:id="folderIcon" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/folder.png" />
+                     </image></ImageView>
+                  <Label fx:id="trackPath" alignment="BOTTOM_CENTER" minHeight="-Infinity" minWidth="-Infinity" textFill="#707070" />
+               </children>
+            </HBox>
+            <Label fx:id="trackObservations" styleClass="defaultTextField" stylesheets="@stylesheets/textField.css" text="Observations" />
+         </children>
+      </VBox>
+      <Button fx:id="deleteTrackButton" mnemonicParsing="false" onMouseClicked="#deleteTrack" styleClass="smallButton" stylesheets="@stylesheets/iconButton.css">
+         <graphic>
+            <ImageView fx:id="trashIcon" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/trash.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <styleClass>
+      <String fx:value="roundedContainer" />
+      <String fx:value="parentContainer" />
+   </styleClass>
+</HBox>
